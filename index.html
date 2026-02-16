@@ -34,6 +34,10 @@
             border: 1px solid rgba(212, 175, 55, 0.2);
             position: relative;
             overflow: hidden;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            hyphens: auto;
+            max-width: 100%;
         }
 
         /* ДЕКОРАТИВНЫЕ ЭЛЕМЕНТЫ */
@@ -66,45 +70,49 @@
 
         .years {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 8rem;
+            font-size: clamp(4rem, 12vw, 8rem);
             font-weight: 700;
             line-height: 1;
             color: #2c3e4f;
             margin-bottom: 15px;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
+            word-break: break-word;
         }
 
         .years span {
             color: #d4af37;
-            font-size: 9rem;
+            font-size: clamp(4.5rem, 14vw, 9rem);
         }
 
         .subtitle {
-            font-size: 1.8rem;
-            letter-spacing: 4px;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            letter-spacing: 3px;
             color: #7f8c8d;
             font-weight: 300;
             text-transform: uppercase;
             margin-bottom: 30px;
+            word-break: break-word;
         }
 
         .name {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
+            font-size: clamp(2rem, 6vw, 3.5rem);
             font-weight: 600;
             color: #2c3e4f;
             border-top: 2px solid #d4af37;
             border-bottom: 2px solid #d4af37;
             display: inline-block;
-            padding: 15px 40px;
+            padding: 15px 30px;
             letter-spacing: 2px;
+            word-break: break-word;
+            max-width: 100%;
         }
 
         /* ДАТА И ВРЕМЯ */
         .date-section {
             background: #f8f4ed;
             border-radius: 100px;
-            padding: 40px;
+            padding: 40px 30px;
             margin-bottom: 40px;
             text-align: center;
             border: 1px solid #d4af37;
@@ -112,125 +120,133 @@
 
         .date {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 600;
             color: #2c3e4f;
             margin-bottom: 10px;
+            white-space: nowrap;
         }
 
         .date strong {
             color: #d4af37;
-            font-size: 3.5rem;
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
         }
 
         .time {
-            font-size: 2rem;
+            font-size: clamp(1.3rem, 4vw, 2rem);
             color: #5d6d7e;
             letter-spacing: 2px;
+            white-space: nowrap;
         }
 
         /* АДРЕС */
         .address-section {
             background: #ffffff;
             border-radius: 40px;
-            padding: 40px;
+            padding: 40px 30px;
             margin-bottom: 40px;
             border: 1px solid #e0d6c5;
             box-shadow: 0 10px 30px -10px rgba(0,0,0,0.1);
         }
 
         .address-label {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
-            letter-spacing: 6px;
+            letter-spacing: 4px;
             color: #d4af37;
             margin-bottom: 15px;
+            word-break: break-word;
         }
 
         .address {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
             font-weight: 600;
             color: #2c3e4f;
             margin-bottom: 10px;
+            word-break: break-word;
         }
 
         .address-detail {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 3vw, 1.3rem);
             color: #7f8c8d;
+            word-break: break-word;
         }
 
         /* ОПИСАНИЕ (РЫБА-ТЕКСТ) */
         .description {
             background: #f8f4ed;
             border-radius: 40px;
-            padding: 50px;
+            padding: 50px 30px;
             margin-bottom: 40px;
             border: 1px solid #e0d6c5;
             font-size: 1.2rem;
             color: #2c3e4f;
             line-height: 1.8;
+            word-break: break-word;
         }
 
         .description p {
             margin-bottom: 20px;
-        }
-
-        .description p:last-child {
-            margin-bottom: 0;
+            font-size: clamp(1rem, 3vw, 1.2rem);
         }
 
         .quote {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
+            font-size: clamp(1.4rem, 4vw, 1.8rem);
             font-style: italic;
             color: #d4af37;
             text-align: center;
             margin: 30px 0;
             border-left: 3px solid #d4af37;
-            padding-left: 30px;
+            padding-left: 20px;
+            word-break: break-word;
         }
 
         /* ГОСТИ */
         .guests-section {
             background: #ffffff;
             border-radius: 40px;
-            padding: 50px;
+            padding: 50px 30px;
             margin-bottom: 40px;
             border: 1px solid #e0d6c5;
         }
 
         .guests-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
+            font-size: clamp(1.8rem, 5vw, 2.2rem);
             font-weight: 600;
             color: #2c3e4f;
             margin-bottom: 30px;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            word-break: break-word;
         }
 
         .guests-title span {
             color: #d4af37;
-            font-size: 2rem;
+            font-size: clamp(1.6rem, 4vw, 2rem);
         }
 
         .guests-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
             gap: 15px;
         }
 
         .guest-card {
             background: #f8f4ed;
-            padding: 15px 25px;
+            padding: 15px 20px;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 3vw, 1.2rem);
             color: #2c3e4f;
             border: 1px solid #e0d6c5;
             text-align: center;
             transition: 0.2s;
+            word-break: break-word;
         }
 
         .guest-card:hover {
@@ -243,7 +259,7 @@
         .contact-section {
             background: #2c3e4f;
             border-radius: 40px;
-            padding: 50px;
+            padding: 50px 30px;
             text-align: center;
             color: white;
             margin-bottom: 30px;
@@ -251,40 +267,79 @@
 
         .contact-title {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
             margin-bottom: 20px;
             color: #d4af37;
+            word-break: break-word;
         }
 
-        .contact-wa {
-            display: inline-block;
+        /* КНОПКИ МЕССЕНДЖЕРОВ */
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 15px 25px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            transition: 0.3s;
+            min-width: 140px;
+            border: 2px solid transparent;
+            word-break: break-word;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Telegram */
+        .contact-btn.telegram {
+            background: #27A7E7;
+            color: white;
+        }
+
+        .contact-btn.telegram:hover {
+            background: #0088cc;
+            box-shadow: 0 10px 25px rgba(39, 167, 231, 0.4);
+        }
+
+        /* WhatsApp */
+        .contact-btn.whatsapp {
             background: #25D366;
             color: white;
-            text-decoration: none;
-            padding: 18px 50px;
-            border-radius: 60px;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin: 20px 0;
-            border: 2px solid transparent;
-            transition: 0.3s;
         }
 
-        .contact-wa:hover {
+        .contact-btn.whatsapp:hover {
             background: #128C7E;
-            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* MAX */
+        .contact-btn.max {
+            background: #7B68EE;
+            color: white;
+        }
+
+        .contact-btn.max:hover {
+            background: #6A5ACD;
+            box-shadow: 0 10px 25px rgba(123, 104, 238, 0.4);
         }
 
         .contact-phone {
-            font-size: 1.5rem;
+            font-size: clamp(1.3rem, 4vw, 1.5rem);
             color: #d4af37;
             font-weight: 600;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+            margin: 20px 0;
+            word-break: break-word;
         }
 
         .contact-note {
             margin-top: 20px;
             color: #a0b8c9;
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
         }
 
         /* ПОДВАЛ */
@@ -292,92 +347,120 @@
             text-align: center;
             padding: 30px 0 0;
             color: #7f8c8d;
-            font-size: 1.1rem;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
             border-top: 1px solid #e0d6c5;
+            word-break: break-word;
         }
 
         /* АДАПТАЦИЯ */
         @media (max-width: 768px) {
-            .card { padding: 40px 25px; }
-            .years { font-size: 5rem; }
-            .years span { font-size: 6rem; }
-            .name { font-size: 2.5rem; }
-            .date { font-size: 2.2rem; }
-            .date strong { font-size: 2.5rem; }
-            .time { font-size: 1.5rem; }
-            .address { font-size: 1.6rem; }
-            .guests-grid { grid-template-columns: 1fr; }
+            .card {
+                padding: 40px 25px;
+            }
+
+            .date-section,
+            .address-section,
+            .description,
+            .guests-section,
+            .contact-section {
+                padding: 30px 20px;
+            }
+
+            .guests-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .contact-btn {
+                width: 100%;
+                max-width: 100%;
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            .guests-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .date,
+            .time {
+                white-space: normal;
+                line-height: 1.3;
+            }
         }
 
         @media (max-width: 480px) {
-            .years { font-size: 4rem; }
-            .years span { font-size: 5rem; }
-            .name { font-size: 2rem; }
-            .subtitle { font-size: 1.3rem; }
+            .card {
+                padding: 30px 20px;
+            }
+
+            .years {
+                font-size: 3.5rem;
+            }
+
+            .years span {
+                font-size: 4rem;
+            }
+
+            .name {
+                font-size: 1.8rem;
+                padding: 12px 20px;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+                letter-spacing: 2px;
+            }
+
+            .date {
+                font-size: 1.6rem;
+            }
+
+            .date strong {
+                font-size: 1.8rem;
+            }
+
+            .time {
+                font-size: 1.2rem;
+            }
+
+            .address {
+                font-size: 1.4rem;
+            }
+
+            .guest-card {
+                font-size: 1rem;
+                padding: 12px 15px;
+            }
+
+            .contact-title {
+                font-size: 1.6rem;
+            }
+
+            .contact-phone {
+                font-size: 1.2rem;
+            }
         }
 
-        /* КНОПКИ МЕССЕНДЖЕРОВ */
-.contact-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    padding: 15px 30px;
-    border-radius: 60px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.2rem;
-    transition: 0.3s;
-    min-width: 160px;
-    border: 2px solid transparent;
-}
+        @media (max-width: 360px) {
+            .years {
+                font-size: 3rem;
+            }
 
-.contact-btn:hover {
-    transform: translateY(-5px);
-}
+            .years span {
+                font-size: 3.5rem;
+            }
 
-/* Telegram */
-.contact-btn.telegram {
-    background: #27A7E7;
-    color: white;
-}
+            .name {
+                font-size: 1.5rem;
+            }
 
-.contact-btn.telegram:hover {
-    background: #0088cc;
-    box-shadow: 0 10px 25px rgba(39, 167, 231, 0.4);
-}
-
-/* WhatsApp */
-.contact-btn.whatsapp {
-    background: #25D366;
-    color: white;
-}
-
-.contact-btn.whatsapp:hover {
-    background: #128C7E;
-    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
-}
-
-/* MAX (российский мессенджер) [citation:6][citation:7] */
-.contact-btn.max {
-    background: #7B68EE;
-    color: white;
-}
-
-.contact-btn.max:hover {
-    background: #6A5ACD;
-    box-shadow: 0 10px 25px rgba(123, 104, 238, 0.4);
-}
-
-/* Адаптация под мобильные */
-@media (max-width: 600px) {
-    .contact-btn {
-        width: 100%;
-        max-width: 280px;
-        padding: 15px 20px;
-        font-size: 1.1rem;
-    }
-}
+            .quote {
+                font-size: 1.2rem;
+                padding-left: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -389,7 +472,7 @@
             <div class="gold-line"></div>
             <div class="pattern">50</div>
 
-            <!-- ШАПКА -->
+            <!-- ШАПКА (ИСПРАВЛЕНО) -->
             <div class="hero">
                 <div class="years">
                     <span>5</span>0
@@ -398,7 +481,7 @@
                 <div class="name">Александр</div>
             </div>
 
-            <!-- ДАТА И ВРЕМЯ -->
+            <!-- ДАТА И ВРЕМЯ (ИСПРАВЛЕНО) -->
             <div class="date-section">
                 <div class="date">
                     <strong>25</strong> апреля 2026
@@ -408,14 +491,14 @@
                 </div>
             </div>
 
-            <!-- АДРЕС -->
+            <!-- АДРЕС (ИСПРАВЛЕНО) -->
             <div class="address-section">
                 <div class="address-label">РЕСТОРАН</div>
                 <div class="address">«Золотой лев»</div>
                 <div class="address-detail">пр. Ленина, 42 · банкетный зал</div>
             </div>
 
-            <!-- ОПИСАНИЕ (РЫБА-ТЕКСТ) -->
+            <!-- ОПИСАНИЕ (ИСПРАВЛЕНО) -->
             <div class="description">
                 <p>
                     Дорогие друзья! Приглашаю вас разделить со мной радость особенного дня — моего 50-летия. 
@@ -439,7 +522,7 @@
                 </p>
             </div>
 
-            <!-- ГОСТИ -->
+            <!-- ГОСТИ (ИСПРАВЛЕНО) -->
             <div class="guests-section">
                 <div class="guests-title">
                     <span>✨</span> Приглашены <span>✨</span>
@@ -458,34 +541,34 @@
                 </div>
             </div>
 
-            <!-- КОНТАКТЫ -->
-        <div class="contact-section">
-            <div class="contact-title">📲 Подтвердите присутствие</div>
-            
-            <!-- ТРИ КНОПКИ МЕССЕНДЖЕРОВ -->
-            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap:        wrap; margin: 30px 0;">
+            <!-- КОНТАКТЫ (ИСПРАВЛЕНО) -->
+            <div class="contact-section">
+                <div class="contact-title">📲 Подтвердите присутствие</div>
                 
-                <!-- Telegram -->
-                <a href="#" class="contact-btn telegram" target=       "_blank">
-                    <span style="font-size: 1.8rem;">✈️</span> Telegram
-                </a>
-                
-                <!-- WhatsApp -->
-                <a href="#" class="contact-btn whatsapp"        target="_blank">
-                    <span style="font-size: 1.8rem;">📱</span> WhatsApp
-                </a>
-                
-                <!-- MAX (российский мессенджер) [      citation:1][citation:3][citation:4] -->
-                <a href="#" class="contact-btn max" target="_blank"       >
-                    <span style="font-size: 1.8rem;">💬</span> MAX
-                </a>
+                <!-- ТРИ КНОПКИ МЕССЕНДЖЕРОВ -->
+                <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin: 30px 0;">
+                    
+                    <!-- Telegram -->
+                    <a href="#" class="contact-btn telegram" target="_blank">
+                        <span style="font-size: 1.5rem;">✈️</span> Telegram
+                    </a>
+                    
+                    <!-- WhatsApp -->
+                    <a href="#" class="contact-btn whatsapp" target="_blank">
+                        <span style="font-size: 1.5rem;">📱</span> WhatsApp
+                    </a>
+                    
+                    <!-- MAX -->
+                    <a href="#" class="contact-btn max" target="_blank">
+                        <span style="font-size: 1.5rem;">💬</span> MAX
+                    </a>
+                </div>
+        
+                <div class="contact-phone">+7 999 XXX-XX-XX</div>
+                <div class="contact-note">Елена (организатор) · до 20 апреля</div>
             </div>
-    
-    <div class="contact-phone">+7 999 XXX-XX-XX</div>
-    <div class="contact-note">Елена (организатор) · до 20 апреля</div>
-</div>
 
-            <!-- ПОДВАЛ -->
+            <!-- ПОДВАЛ (ИСПРАВЛЕНО) -->
             <div class="footer">
                 С нетерпением жду встречи! ✨
             </div>
